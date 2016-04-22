@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------------------------------------------------------
-                **Martin Batista - C, C++ and Java Programmer**
+                **Martin Batista - Java Programmer**
 
                                   Mar.29.2016
                                 *DOCUMENTATION*
@@ -24,8 +24,8 @@ Input validation: Only accept the letters A, B, C or D as answers.
 package driverlic;
 
 /**
- * youtube.com video java tutorial (arrays, loops) length: 21:11
- * @adapted by Marty Batista
+ *
+ * @author Marty Batista
  */
 
 import java.util.Scanner;
