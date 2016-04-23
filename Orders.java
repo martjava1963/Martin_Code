@@ -1,9 +1,16 @@
 /**
  *---------------------------------------------------------------------------------------------------------------------- 
  *                                           *Wine Ordering GUI System Platform*
- * 
- * 
- * 
+ *                                                 --Documentation--
+ * This GUI app has the following input fields:
+ * Customer Name, Customer Telephone #, Wine type quantity fields for 3 wine types
+ * Output fields include: Date of Order, Order Time, Unit Price per wine type, Sub Totals per wine type,
+ * A randomly generated order reference number output field, Order total, Tax paid, Net Price. Also included as an output field is 
+ * a textarea dedicated for printing out receipt information accessed via a tab. this app also feature's a calculator 
+ * which is also accessed by a tab.
+ * Once the user input's the data and clicks on the Total button, the app compute's the data. In response to the user clicking on the 
+ * Display button, the app then print's the information onto the reciept text area and also write's the information to a file.
+ * The app also feature's a Reset and an Exit button.
  * 
  *----------------------------------------------------------------------------------------------------------------------
  */
@@ -23,7 +30,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Marty
+ * @author Martin.Batista
  */
 public class Orders extends javax.swing.JFrame {
     
