@@ -1,0 +1,179 @@
+<!-- =====**PHP CODE BEGIN**===== -->
+<?php 
+
+  define("YEAR", 2014);  // a constant doesn't begin with the dollar sign symbol
+  define("JOB_TITLE", "Software Programmer");  // an invalid constant ex. would be: define("2LEGIT", "to quit");
+  define("MAX_BADGES", 150000);
+
+
+?>
+<!-- =====**PHP CODE END**===== -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset=utf-8>
+  	<title><?php echo $full_Name; ?></title>
+  	<link href="css/style.css" rel="stylesheet" />
+  </head>
+  
+  <body>
+    <?php 
+    $name = 'Mikey The Frog';   ?>
+    <section class="sidebar text-center">
+      <div class="avatar">
+        <img src="img/avatar.png" alt="" title="This is Mikey the Frog!!!">
+      </div>
+      <h1><?php echo $name; ?></h1>
+     
+      <ul class="social">
+        <li><a href=""><span class="icon twitter"></span></a></li>
+      </ul>
+    </section>
+    <section class="main">
+      <pre>
+        <!-- =====**PHP CODE BEGIN**===== -->
+        <?php
+//         $one = 1;
+//         $two = 2;
+//         $three = 3;
+//         $string_one = '1';  
+//         $var = 'john'; 
+//         $num = 0.00;
+
+        // OUTPUT MY CONSTANTS
+        echo "This is a constant: ", YEAR, "\n\n";
+       // echo "\n";
+        echo "This is a constant: ", JOB_TITLE;
+        echo "\n";
+        echo "This is a constant: ", MAX_BADGES;
+        echo "\n\n";
+
+      //   echo $one;
+         
+    //    if (isset($var)) {
+         // echo "This var is set so I will print.";
+         // echo $var;
+    //    }
+//       $greeting = "\nHello, Friends!\n";        
+//       echo $greeting{0} = 'J'; 
+//        $secondary_greeting = "How are you today?"; 
+//        echo $greeting;  
+//        echo $secondary_greeting;
+//        echo "\n\n";
+        
+        $bool = TRUE;    // order of operations is sequential...line by line...like procedural programming...
+      //  var_dump($bool); // dump's variable info to screen in var dump format...
+        $bool = FALSE;
+      //  var_dump($bool);    //NOTE: anything that is a non zero value is considered TRUE...
+
+        // type casting to bool
+        var_dump((bool) "ABC");   // type casting empty string to bool result's in FALSE
+        var_dump((bool) 1);
+        var_dump((bool) 1.0);
+        var_dump((bool) array(2));  // anything that is empty in anyway is considered FALSE in BOOLEAN
+        var_dump((bool) -1);
+      
+/*---------------------------Arrays BEGIN----------------------------------------*/
+        
+        $array_example = array();
+        $eye_colors = array('blue', 'brown', 'green', 'hazel', 'purple');  
+
+        echo "\n\n";
+        echo "\n\n";
+       // print_r($array_example);
+        print_r($eye_colors);
+        
+        echo "\n\n";
+        echo $eye_colors[0];        // zero-based arrays in PHP  -----   key-value pairs  
+        echo "\n\n\n\n";
+
+/*---------------------------Arrays END----------------------------------------*/
+
+
+
+/*---------------------------Operators BEGIN----------------------------------------*/ // LINE_OF_CODE: 114  (cross-reference)
+        
+        $a = 10;
+        $b = 10;
+
+        $sum = $a + $b;           // result of addition
+        $diff = $a - $b;          // result of subtraction
+        $product = $a * $b;       // result of multiplication  
+        $quotient = $a / $b;      // result of division         $result = array('sum', 'diff', 'product', 'quotient');  //lol
+
+        $product = $product + 2;
+        $product--; 
+        $sum--;
+        $diff--;
+        $quotient--;                   //$product++;  ---inc
+                                       //$product--;  ---dec 
+
+
+        //* ------------------------------------COMPARISON OPERATORS----------------------------------------------- *\\  
+        $a = 10;
+        $b = 10;
+        $c = 20;
+        $d = "10";  // equal but not identical because it's a string...
+
+        //boolean comparison
+        // OUTPUT function
+        var_dump( $a == $b); // equals operator ==
+        echo "comparing an int with a string: $a==$d equal but not identical:   ", var_dump( $a == $d); // equal but not identical because it's($d) a string...
+        // identical operator ===
+        echo "\n\n\n";
+        var_dump( $a === $d);
+
+        echo "\n\n\n\n";
+         echo "\n\n IDENTICAL OPERATOR\n";
+        echo "\n A and B: ",var_dump( $a === $b);
+        echo "\n A and C: ",var_dump( $a === $c);
+        echo "\n A and D: ",var_dump( $a === $d);
+        echo "\n\n\n\n B and A: ",var_dump( $b === $a);
+        echo "\n B and C: ",var_dump( $b === $c);
+        echo "\n B and D: ",var_dump( $b === $d);
+
+        echo "\n\n NOT EQUAL TO OPERATOR\n";
+        echo "\n A not equal to B is: ",var_dump( $a != $b);  // not equal
+        echo "\n A not equal to C is: ",var_dump( $a != $c);  // not equal
+
+        // NOT IDENTICAL OPERATOR: !==
+        echo "\n\n NOT IDENTICAL OPERATOR\n";
+        echo "\n A not identical to C is: ",var_dump( $a !== $c);  // not identical
+        echo "\n A not identical to D is: ",var_dump( $a !== $d);  // not identical
+        echo "\n A not identical to B is: ",var_dump( $a !== $b);  // not identical
+
+
+        // LESS THAN GREATER THAN OPERATOR:  <  >  <=   >=
+        echo "\n\n LESS THAN GREATER THAN (Equal to) OPERATORs\n";
+        echo "\n A is less than B: ", var_dump( $a < $b );  // less than
+        echo "\n A is greater than C: ", var_dump( $a > $c );  // greater than
+        echo "\n A is less than or equal to D: ", var_dump( $a <= $d ); // less than or equal to
+        echo "\n A is greater than or equal to C: ", var_dump( $a >= $c ); // greater than or equal to
+
+
+
+    //* ------------------------------------COMPARISON OPERATORS----------------------------------------------- *\\  
+
+/*---------------------------Operatos END---------------------------------------------*/
+
+      ?>
+      <!-- =====**PHP CODE END**===== -->
+
+      </pre>
+      <ul>
+        <!--** OUTPUT THE ABOVE CALCULATIONS: USE OF OPERATORS- BEGIN ** LINE_OF_CODE: 95 (cross-reference)-->          
+        <li><?php echo $sum; ?></li>
+        <li><?php echo $diff; ?></li>
+        <li><?php echo $product; ?></li>
+        <li><?php echo $quotient; ?></li>
+        <!--** OUTPUT THE ABOVE CALCULATIONS: USE OF OPERATORS- END **  LINE_OF_CODE: 107-->            
+        <li></li>
+        <li></li>
+    <!--  <li><?php echo gettype($one); ?></li> commented out -->  
+    <!--   <li><?php echo gettype($string_one); ?></li> commented out -->
+    <!--  <li><?php echo gettype($num); ?></li>  commented out -->
+      </ul>
+    </section>
+  </body>
+</html>
